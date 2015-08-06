@@ -1,0 +1,6 @@
+%h1= @wow.title
+%p= @wow.description
+
+= link_to "Back", root_path
+= link_to "Edit", edit_wow_path
+= link_to "Delete", wow_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
