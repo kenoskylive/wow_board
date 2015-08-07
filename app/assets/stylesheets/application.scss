@@ -30,7 +30,7 @@ nav {
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 	.navbar-brand {
 		a {
-			color: #BD1E23;
+			color: #d63005;
 			font-weight: bold;
 			&:hover {
 				text-decoration: none;
@@ -39,7 +39,7 @@ nav {
 	}
 }
 
-#pins {
+#wows {
   margin: 0 auto;
   width: 100%;
   .box {
@@ -78,11 +78,11 @@ nav {
 	}
 }
 
-#pin_show {
+#wow_show {
 	.panel-heading {
 		padding: 0;
 	}
-	.pin_image {
+	.wow_image {
 		img {
 			max-width: 100%;
 			width: 100%;

@@ -3,7 +3,7 @@ class WowsController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show]
 
     def index
-        @wows = Wows.all.order("created_at DESC")
+        @wows = Wow.all.order("created_at DESC")
     end
 
     def show
