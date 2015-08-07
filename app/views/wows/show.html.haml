@@ -1,11 +1,32 @@
-%h1= @wow.title
-%p= @wow.description
-%p
-Submited by
-= @wow.user.email
+#wow_show.row
+	.col-md-8.col-md-offset-2
+		.panel.panel-default
+			.panel-heading.pin_image
+				= image_tag @wow.image.url
+			.panel-body
+				%h1= @wow.title
+				%p.description= @wow.description
+			.panel-footer
+				.row
+					.col-md-6
+						%p.user
+							Submitted by
+							= @wow.user.email
+					.col-md-6
+						.btn-group.pull-right
+							= link_to like_wow_path(@wow), method: :put, class: "btn btn-default" do
+								%span.glyphicon.glyphicon-heart
+								= @wow.get_upvotes.size
+							- if user_signed_in?
+								= link_to "Edit", edit_wow_path, class: "btn btn-default"
+								= link_to "Delete", wow_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
 
-%br/
 
-= link_to "Back", root_path
-= link_to "Edit", edit_wow_path
-= link_to "Delete", wow_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"
+
+
+
+
+
+
+
+

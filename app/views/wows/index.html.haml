@@ -1,3 +1,9 @@
-= link_to "New Wow", new_wow_path
-- @wows.each do |wow|
-  %h2= link_to wow.title, wow
+#wows.transitions-enabled
+	- @wows.each do |wow|
+		.box.panel.panel-default
+			= link_to (image_tag wow.image.url), wow
+			.panel-body
+				%h2= link_to wow.title, wow
+				%p.user
+				Submitted by
+				= wow.user.email

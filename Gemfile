@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.1.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
@@ -33,17 +33,26 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'masonry-rails', '~> 0.2.1'
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'aws-sdk'
+gem 'rails-erd'
+gem 'railroady'
 gem 'carrierwave'
+gem 'cocaine', '~> 0.5.7'
 gem 'simple_form'
-#gem 'mini_magick'
+gem 'paperclip'
 gem 'country_select'
 gem 'puma'
 gem 'haml'
-gem 'haml-rails'
+#gem 'haml-rails'
 gem 'mini_magick', '~> 4.2.7'
 gem 'devise'
 gem 'rmagick', '~> 2.15.2'
-#gem 'imagemagick-binaries', '~> 6.8.7.5.1'
+gem 'image_magick', '~> 0.1.9'
+gem 'imagemagick-identify', '~> 0.0.1'
+gem 'imagemagick-binaries', '~> 6.8.7.5.1'
+#gem 'nokogiri', '~> 1.6.0'
 #gem 'carrierwave-graphicsmagick', '~> 1.0.0'
 
 
