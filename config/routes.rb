@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
+  resources :profiles
   devise_for :users
   resources :wows do
     member do
       put "like",    to: "wows#upvote"
     end
   end
+
+  get '/signedinuserprofile' => 'profiles#signedinuserprofile'
 
   root "wows#index"
 end

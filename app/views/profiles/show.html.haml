@@ -1,0 +1,21 @@
+#profile_show.row
+  .col-md-8.col-md-offset-2
+    .panel.panel-default
+      .panel-body
+        %h1= @profile.firstname
+        %h1= @profile.lastname
+        %h1= @profile.address
+        %p.description= @profile.about_me
+      .panel-footer
+        .row
+          .col-md-6
+            %p.profile
+              
+          .col-md-6
+            .btn-group.pull-right
+              = link_to like_wow_path(@profile), method: :put, class: "btn btn-default" do
+                %span.glyphicon.glyphicon-heart
+                = @profile.get_upvotes.size
+              - if user_signed_in?
+                = link_to "Edit", edit_profile_path, class: "btn btn-default"
+                = link_to "Delete", profile_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default"

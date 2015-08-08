@@ -1,0 +1,25 @@
+= simple_form_for @profile, html: { multipart: true } do |f|
+  - if @profile.errors.any?
+    #errors
+      %h2
+        = pluralize(@profile.errors.count, "error")
+        prevented this Profile from saving
+      %ul
+        - @profile.errors.full_messages.each do |msg|
+          %li= msg
+
+
+  .form-group
+    = f.input :firstname, input_html: { class: 'form-control' }
+
+  .form-group
+    = f.input :lastname, input_html: { class: 'form-control' }
+
+  .form-group
+    = f.input :address, input_html: { class: 'form-control' }
+
+  .form-group
+    = f.input :about_me, input_html: { class: 'form-control' }
+
+  = f.button :submit, class: "btn btn-primary"
+
